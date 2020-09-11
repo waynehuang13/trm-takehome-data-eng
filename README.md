@@ -2,7 +2,7 @@
 
 This repo provides the boiler plate required to setup the API for the takehome BONUS section. 
 
-This assumes repo assumes: 
+This repo assumes: 
 - Familiarity with Python
 - Understanding of basic HTTP request semantics
 - Installed Conda as a package manager
