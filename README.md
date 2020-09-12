@@ -45,7 +45,7 @@ You should see the following response:
 Depending on your data store, you may have to install one or more packages
 to connect via Python. I have listed the most common packages below:
 - RedShift/Postgres: [Psycopg2](https://pypi.org/project/psycopg2/)
-- MySQL: [mysqllient](https://pypi.python.org/pypi/mysqlclient)
+- MySQL: [mysqlclient](https://pypi.python.org/pypi/mysqlclient)
 - BigQuery: [google-cloud-bigquery](https://pypi.org/project/google-cloud-bigquery/)
 
 
