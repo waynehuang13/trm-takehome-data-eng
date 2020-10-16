@@ -1,15 +1,13 @@
 FROM continuumio/miniconda3
 
-ENV FLASK_APP app.py
+WORKDIR /app
 ENV FLASK_ENV development
 
 COPY requirements.txt ./
-RUN conda create -n ${FLASK_ENV} python=3.8
-RUN conda install -n ${FLASK_ENV} requirements.txt
-RUN conda init bash
-RUN conda activate ${FLASK_ENV}
+RUN conda create -n ${FLASK_ENV} && conda install -n ${FLASK_ENV} --file requirements.txt
+ENV PATH /opt/conda/envs/${FLASK_ENV}/bin:$PATH
 
-COPY . .
+COPY app.py .
 
 EXPOSE 5000
-CMD ["flask", "run"]
+ENTRYPOINT ["flask", "run"]
