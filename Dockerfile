@@ -10,4 +10,4 @@ ENV PATH /opt/conda/envs/${FLASK_ENV}/bin:$PATH
 COPY app.py .
 
 EXPOSE 5000
-ENTRYPOINT ["flask", "run"]
+ENTRYPOINT ["flask", "run", "--host", "0.0.0.0"]
