@@ -24,7 +24,7 @@ variables:
 before_script:
   - echo $CI_REGISTRY_IMAGE:$TAG $PWD
   # login
-  - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+  - echo $CI_REGISTRY_PASSWORD | docker login -u $CI_REGISTRY_USER --password-stdin $CI_REGISTRY
 
 after_script:
   - docker image prune -af
